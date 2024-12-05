@@ -100,7 +100,7 @@ class AdminsViewEdit(generics.CreateAPIView):
     permission_classes = (permissions.IsAuthenticated,)
     #Contar el total de cada tipo de usuarios
     def get(self, request, *args, **kwargs):
-        #Obtener total de admins
+        #Obtener total de admins 
         admin = Administradores.objects.filter(user__is_active = 1).order_by("id")
         lista_admins = AdminSerializer(admin, many=True).data
         # Obtienes la cantidad de elementos en la lista

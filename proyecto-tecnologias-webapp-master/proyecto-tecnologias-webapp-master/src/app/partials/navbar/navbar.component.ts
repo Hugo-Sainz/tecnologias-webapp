@@ -34,6 +34,10 @@ export class NavbarComponent implements OnInit{
 
   }
 
+  public goMateriasReg(){
+    this.router.navigate(["registro-materias"]);
+  }
+
   public goRegistro(){
     this.router.navigate(["registro-usuarios"]);
   }

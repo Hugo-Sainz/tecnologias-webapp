@@ -9,7 +9,7 @@
         </div>
         <mat-form-field class="mat-input" appearance="outline">
             <mat-label>ID de trabajador</mat-label>
-            <input matInput [(ngModel)]="maestro.id_trabajador" name="id" placeholder="Escribe ID de trabajador">
+            <input matInput [(ngModel)]="maestro.id_trabajador" name="id" placeholder="Escribe ID de trabajador" mask="0000000000">
         </mat-form-field>
         <div *ngIf="errors.id_trabajador" class="invalid-feedback">{{ errors.id_trabajador }}</div>
 

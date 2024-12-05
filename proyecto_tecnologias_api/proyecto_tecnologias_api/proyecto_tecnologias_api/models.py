@@ -54,3 +54,19 @@ class Maestros(models.Model):
 
     def __str__(self):
         return "Perfil del maestro "+self.first_name+" "+self.last_name
+
+class Materias(models.Model):
+    id = models.BigAutoField(primary_key=True)
+    nrc = models.CharField(max_length=255,null=True, blank=True)
+    nombre_materia = models.CharField(max_length=255,null=True, blank=True)
+    seccion = models.CharField( null=True, blank=True, max_length=255)
+    dias_json = models.TextField( null=True, blank=True)
+    hora_inicio = models.CharField(max_length=255,null=True, blank=True)
+    hora_fin = models.CharField(max_length=255,null=True, blank=True)
+    salon = models.CharField(max_length=255,null=True, blank=True)
+    programa = models.CharField(max_length=255,null=True, blank=True)
+    profesor = models.CharField(max_length=255,null=True, blank=True)
+    creditos = models.CharField(max_length=255,null=True, blank=True)
+
+    def __str__(self):
+        return "Datos de la materia "+self.nombre_materia

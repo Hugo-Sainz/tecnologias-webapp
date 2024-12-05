@@ -106,7 +106,7 @@ class AlumnosViewEdit(generics.CreateAPIView):
         alumno.rfc = request.data["rfc"]
         alumno.curp = request.data["curp"]
         alumno.edad = request.data["edad"]
-        alumno.ocupacion = request.data["ocupacion"]
+        alumno.ocupacion = request.data["ocupacion"] 
         
         alumno.save()
         temp = alumno.user

@@ -21,6 +21,7 @@ from proyecto_tecnologias_api.views import alumnos
 from proyecto_tecnologias_api.views import maestros
 from proyecto_tecnologias_api.views import auth
 from proyecto_tecnologias_api.views import alumnos
+from proyecto_tecnologias_api.views import materias
 
 urlpatterns = [
     #Version
@@ -46,5 +47,9 @@ urlpatterns = [
     #Login
         path('token/', auth.CustomAuthToken.as_view()),
     #Logout
-        path('logout/', auth.Logout.as_view())
+        path('logout/', auth.Logout.as_view()),
+    #create materia
+        path('materias/', materias.MateriasView.as_view()),
+        path('lista-materias/', materias.MateriasAll.as_view())
+        
 ]

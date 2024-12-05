@@ -24,6 +24,8 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatDialogModule} from '@angular/material/dialog';
+
+
 //Para usar el mask
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 //Cambia el idioma a español
@@ -37,6 +39,11 @@ import { AdminScreenComponent } from './services/admin-screen/admin-screen.compo
 import { AlumnosScreenComponent } from './services/alumnos-screen/alumnos-screen.component';
 import { MaestrosScreenComponent } from './services/maestros-screen/maestros-screen.component';
 import { EliminarUserModalComponent } from './modals/eliminar-user-modal/eliminar-user-modal.component';
+import { GraficasScreenComponent } from './screens/graficas-screen/graficas-screen.component';
+import { NgChartsModule } from 'ng2-charts';
+import { RegistroMateriasScreenComponent } from './screens/registro-materias-screen/registro-materias-screen.component';
+import { MateriasScreenComponent } from './services/materias-screen/materias-screen.component';
+
 
 @NgModule({
   declarations: [
@@ -51,7 +58,10 @@ import { EliminarUserModalComponent } from './modals/eliminar-user-modal/elimina
     AdminScreenComponent,
     AlumnosScreenComponent,
     MaestrosScreenComponent,
-    EliminarUserModalComponent
+    EliminarUserModalComponent,
+    GraficasScreenComponent,
+    RegistroMateriasScreenComponent,
+    MateriasScreenComponent,
   ],
   imports: [
     BrowserModule,
@@ -71,7 +81,10 @@ import { EliminarUserModalComponent } from './modals/eliminar-user-modal/elimina
     NgxMaskDirective,
     MatTableModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatDialogModule,
+    NgChartsModule,
+    
+    
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'es-ES'},
