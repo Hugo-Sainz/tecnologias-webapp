@@ -101,7 +101,7 @@ class MaestrosView(generics.CreateAPIView):
         return Response(user.errors, status=status.HTTP_400_BAD_REQUEST)
     
 #Se agrega edicion y eliminar maestros
-class MaestrosViewEdit(generics.CreateAPIView):
+class MaestrosViewEdit(generics.CreateAPIView): 
     permission_classes = (permissions.IsAuthenticated,)
     def put(self, request, *args, **kwargs):
         # iduser=request.data["id"]

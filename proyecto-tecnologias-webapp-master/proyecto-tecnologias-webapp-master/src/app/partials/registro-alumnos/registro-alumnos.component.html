@@ -9,7 +9,7 @@
         </div>
           <mat-form-field class="mat-input" appearance="outline">
               <mat-label>ID/Matrícula</mat-label>
-              <input matInput [(ngModel)]="alumno.matricula" name="id" placeholder="Escribe ID o matrícula">
+              <input matInput [(ngModel)]="alumno.matricula" name="id" placeholder="Escribe ID o matrícula" mask="0000000000">
           </mat-form-field>
           <div *ngIf="errors.matricula" class="invalid-feedback">{{ errors.matricula }}</div>
 
